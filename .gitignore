@@ -1,0 +1,5 @@
+carservice/__pycache__/*
+sign_up/migrations/__pycache__/*
+sign_up/__pycache__/*
+sign_up/tests/__pycache__/*
+.vscode/*
