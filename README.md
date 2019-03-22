@@ -5,5 +5,5 @@
 Для запуска на windows системах наберите python manage.py runserver 127.0.0.1:80, 
 на linux системах gunicorn carservice.wsgi --bind=127.0.0.1:80? 
 либо запустите docker образ с docker hub командой docker run --rm -d -p 80:8000 pse17/carservice:carservice
-затем в адресной строке браузера http://127.0.0.1d
+затем в адресной строке браузера http://127.0.0.1
 Для запуска тестов наберите python manage.py test sign_up.tests
