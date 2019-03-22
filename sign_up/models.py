@@ -17,7 +17,8 @@ class Customer(models.Model):
     signup_time = models.CharField(max_length=5)
 
     def __str__(self):
-        return '%s автомобиль %s записан к мастеру %s на %s в %s' % (
+        '''String for representing the Customer object.'''
+        return 'Владелец %s автомобиль %s записан к мастеру %s на %s в %s' % (
             self.name, self.car, self.engeneer.name, self.signup_date, self.signup_time
             )
 

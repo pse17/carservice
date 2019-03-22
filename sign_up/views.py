@@ -27,12 +27,12 @@ class CustomerFormView(FormView):
         context['signup_date'] = signup_date
 
         #Get the occupied time ranges
-        signed_up = Customer.objects.values('signup_time').all()
-        signed_up = signed_up.filter(engeneer_id=engeneer_id)
-        signed_up = signed_up.filter(signup_date=signup_date)
+        occupied_range = Customer.objects.values('signup_time').all()
+        occupied_range = occupied_range.filter(engeneer_id=engeneer_id)
+        occupied_range = occupied_range.filter(signup_date=signup_date)
 
         #Not occupied send to form
-        queryset = SignUpRange.objects.exclude(signup_time__in=signed_up).all()
+        queryset = SignUpRange.objects.exclude(signup_time__in=occupied_range).all()
         context['form'].fields['ranges'].queryset = queryset
         return context
 
