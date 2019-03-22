@@ -21,7 +21,7 @@ class CustomerModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         Customer.objects.create(name='John Doe', signup_time='10:00', signup_date=date.today())
-    
+
     def test_signup_time_max_lenght(self):
         customer = Customer.objects.get(id=1)
         #Must be the same
@@ -34,7 +34,7 @@ class SignUpRangeModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         SignUpRange.objects.create(signup_time='10:00')
-    
+
     def test_signup_time_max_lenght(self):
         signup_range = SignUpRange.objects.get(id=1)
         #Must be the same
